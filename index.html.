@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grandiose Garments | Custom Apparel & DTF Printing</title>
+
+<meta name="description" content="Grandiose Garments — custom apparel, DTF printing, gang sheets and bulk orders in Los Angeles. Just ask for a quote.">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,8,0.95);
+  border-bottom: 1px solid #292929;
+}
+
+nav {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  display: block;
+  color: #d4aa55;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #d4aa55;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid #d4aa55;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: .7px;
+}
+
+.gold {
+  background: #d4aa55;
+  color: #111;
+}
+
+.outline {
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(212,170,85,.25), transparent 30%),
+    linear-gradient(135deg, #080808 0%, #17130b 100%);
+}
+
+.hero-content {
+  max-width: 750px;
+  padding: 90px 0;
+}
+
+.kicker {
+  color: #e2c77e;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 8vw, 85px);
+  line-height: .95;
+  margin: 18px 0 25px;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #d5d5d5;
+  font-size: 19px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.trust {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  color: #bbb;
+  font-size: 13px;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.light {
+  background: #f8f1e6;
+  color: #111;
+}
+
+.dark {
+  background: #111;
+}
+
+.section-title {
+  max-width: 700px;
+  margin-bottom: 38px;
+}
+
+.section-title h2 {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  line-height: 1.05;
+  margin: 10px 0 15px;
+}
+
+.section-title p {
+  color: #666;
+}
+
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service {
+  background: white;
+  border: 1px solid #e4d8c4;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.number {
+  color: #a97d2f;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.service h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.service p {
+  color: #666;
+}
+
+/* FEATURE */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.feature-box {
+  min-height: 430px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background:
+    radial-gradient(circle at center, #282218, #111 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px;
+}
+
+.shirt {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  letter-spacing: 3px;
+}
+
+.feature-text {
+  padding: 35px;
+}
+
+.feature-text h3 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  margin: 10px 0 20px;
+}
+
+.feature-text p {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* PROCESS */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.step {
+  border-top: 1px solid #c7a456;
+  padding-top: 20px;
+}
+
+.step h3 {
+  font-family: Georgia, serif;
+  margin: 10px 0;
+  font-size: 23px;
+}
+
+.step p {
+  color: #666;
+}
+
+/* QUOTE */
+
+.quote {
+  background: linear-gradient(135deg, #d2aa5c, #efd79c);
+  color: #111;
+  padding: 60px 25px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.quote h2 {
+  font-family: Georgia, serif;
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.quote p {
+  max-width: 650px;
+  margin: auto;
+  color: #51432b;
+}
+
+/* CONTACT */
+
+.contact {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.contact-box {
+  border: 1px solid #292929;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.contact-box small {
+  color: #d4aa55;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-box h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-top: 7px;
+}
+
+.contact-box a:hover {
+  color: #d4aa55;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292929;
+  padding: 40px 0;
+  color: #999;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer strong {
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .services,
+  .feature,
+  .steps,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .feature-box {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  section {
+    padding: 65px 0;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .section-title h2,
+  .quote h2 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+
+      <a href="#home" class="logo">
+        GRANDIOSE
+        <span>GARMENTS</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a href="#contact" class="button gold">
+        GET A QUOTE
+      </a>
+
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="kicker">
+        Los Angeles • Custom Apparel • DTF Printing
+      </div>
+
+      <h1>
+        Quality Prints Made To Stand Out.
+      </h1>
+
+      <p>
+        Grandiose Garments brings your designs to life with
+        custom apparel, DTF printing and gang sheets.
+        Quality work, competitive pricing and bulk orders welcome.
+      </p>
+
+      <div class="buttons">
+
+        <a class="button gold" href="tel:+12137942035">
+          CALL (213) 794-2035
+        </a>
+
+        <a class="button outline" href="#contact">
+          REQUEST A QUOTE
+        </a>
+
+      </div>
+
+      <div class="trust">
+        <span>✓ Custom Orders</span>
+        <span>✓ Bulk Orders Welcome</span>
+        <span>✓ Fast Shipping</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="light" id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="kicker">
+        Our Services
+      </div>
+
+      <h2>
+        Built For Creators, Brands & Businesses.
+      </h2>
+
+      <p>
+        Whether you need custom apparel, DTF gang sheets
+        or a larger production order, just ask us for a quote.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+      <div class="service">
+
+        <div class="number">01</div>
+
+        <h3>DTF Gang Sheets</h3>
+
+        <p>
+          Arrange multiple designs for printing.
+          Great for creators, clothing brands and businesses.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="number">02</div>
+
+        <h3>Custom Apparel</h3>
+
+        <p>
+          Custom T-shirts and apparel featuring
+          your artwork, graphics, logos and ideas.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="number">03</div>
+
+        <h3>Bulk Orders</h3>
+
+        <p>
+          Need a larger quantity?
+          Contact us and ask for a custom quote.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WORK -->
+
+<section class="dark" id="work">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="kicker">
+        Grandiose Garments
+      </div>
+
+      <h2>
+        Your Design Deserves To Be Seen.
+      </h2>
+
+      <p style="color:#aaa">
+        Custom apparel made for your vision.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-box">
+
+        <div>
+
+          <div class="shirt">
+            GRANDIOSE
+          </div>
+
+          <div style="color:#d4aa55;letter-spacing:4px">
+            GARMENTS
+          </div>
+
+          <p style="color:#aaa;margin-top:25px">
+            CUSTOM APPAREL • DTF PRINTING
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="feature-text">
+
+        <div class="kicker">
+          Custom Printing
+        </div>
+
+        <h3>
+          Bring Your Designs To Life.
+        </h3>
+
+        <p>
+          From one custom shirt to a larger production
+          order, Grandiose Garments is ready to help
+          bring your ideas to life.
+        </p>
+
+        <p>
+          <strong>Pricing:</strong>
+          Every project is different.
+          <strong>Just ask for a quote.</strong>
+        </p>
+
+        <a class="button gold" href="tel:+12137942035">
+          ASK FOR A QUOTE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="light" id="process">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="kicker">
+        How It Works
+      </div>
+
+      <h2>
+        Simple. Direct. Business Ready.
+      </h2>
+
+      <p>
+        Send us the details and we'll help you get
+        the right quote for your order.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="number">01</div>
+
+        <h3>Tell Us What You Need</h3>
+
+        <p>
+          Send your design, garment type,
+          quantity and order details.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">02</div>
+
+        <h3>Get Your Quote</h3>
+
+        <p>
+          Pricing depends on the job and quantity.
+          Just ask for a quote.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="number">03</div>
+
+        <h3>Approve & Produce</h3>
+
+        <p>
+          Once the details are confirmed,
+          production can move forward.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="quote">
+
+      <div class="kicker" style="color:#76571d">
+        Let's Work Together
+      </div>
+
+      <h2>
+        Ready For A Quote?
+      </h2>
+
+      <p>
+        Call, text, email or message Grandiose Garments
+        with your project details.
+        Pricing is by quote — just ask.
+      </p>
+
+      <div class="buttons" style="justify-content:center">
+
+        <a
+          class="button"
+          style="background:#111;color:white;border-color:#111"
+          href="tel:+12137942035">
+          CALL / TEXT
+        </a>
+
+        <a
+          class="button"
+          style="color:#111;border-color:#111"
+          href="mailto:grand7garments@gmail.com">
+          EMAIL US
+        </a>
+
+        <a
+          class="button"
+          style="color:#111;border-color:#111"
+          href="https://www.instagram.com/grand7garments/"
+          target="_blank">
+          INSTAGRAM
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact">
+
+      <div class="contact-box">
+
+        <small>Primary Phone</small>
+
+        <h3>
+          <a href="tel:+12137942035">
+            (213) 794-2035
+          </a>
+        </h3>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <small>Alternate Phone</small>
+
+        <h3>
+          <a href="tel:+13235950008">
+            (323) 595-0008
+          </a>
+        </h3>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <small>Email</small>
+
+        <h3>
+          <a href="mailto:grand7garments@gmail.com">
+            grand7garments@gmail.com
+          </a>
+        </h3>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <small>Instagram</small>
+
+        <h3>
+          <a
+            href="https://www.instagram.com/grand7garments/"
+            target="_blank">
+            @grand7garments
+          </a>
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer">
+
+    <div>
+      <strong>GRANDIOSE GARMENTS</strong>
+      <br>
+      <small>
+        Custom Apparel • DTF Printing • Gang Sheets
+      </small>
+    </div>
+
+    <div>
+      Los Angeles, California
+    </div>
+
+    <div>
+      © 2026 Grandiose Garments
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
