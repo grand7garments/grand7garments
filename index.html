@@ -152,8 +152,10 @@ margin:10px 0;
 .card p{color:#69635c}
 
 .showcase{
-columns:4 250px;
-column-gap:22px;
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:22px;
+align-items:start;
 }
 .showcase .visual{
 break-inside:avoid;
@@ -503,7 +505,7 @@ More finished-work photos can be added here.
 </div>
 
 <div class="showcase">
-
+<div class="gallery-grid">
 <div class="visual">
   <img src="work1.JPG" alt="Grandiose Garments custom work" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
 </div>
@@ -598,7 +600,8 @@ More finished-work photos can be added here.
 
 <div class="visual">
   <img src="work24.jpg" alt="Grandiose Garments custom work" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
-</div>  
+</div>
+</div>
   
 <div class="copy">
 
