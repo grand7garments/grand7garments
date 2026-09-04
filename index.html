@@ -545,6 +545,25 @@ h1{font-size:53px}
     right: 10px;
   }
 }
+/* Grandiose Garments logo */
+.logo img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .logo img {
+    width: 65px;
+    height: 65px;
+  }
+}
 </style>
 </head>
 
@@ -554,8 +573,7 @@ h1{font-size:53px}
 <div class="wrap">
 <nav>
 <a href="#home" class="logo">
-GRANDIOSE
-<span>GARMENTS</span>
+  <img src="logo.png" alt="Grandiose Garments">
 </a>
 
 <div class="navlinks">
