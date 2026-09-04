@@ -619,115 +619,33 @@ h1{font-size:53px}
     max-width: 100%;
   }
 }
-/* PREMIUM SERVICES */
-
-.services {
-  background: #0b0b0b;
-  padding: 110px 0;
-  color: #ffffff;
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.section-heading {
-  max-width: 720px;
-  margin-bottom: 55px;
+.card{
+  background:white;
+  border:1px solid #dfd3c0;
+  border-radius:12px;
+  padding:30px;
 }
 
-.section-heading .eyebrow {
-  color: #c9a45c;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 18px;
+.number{
+  color:#a47726;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
 
-.section-heading h2 {
-  color: #ffffff;
-  font-size: clamp(42px, 5vw, 68px);
-  line-height: 1;
-  margin: 0 0 22px;
+.card h3{
+  font:700 25px Georgia,serif;
+  margin:10px 0;
 }
 
-.section-heading h2 span {
-  display: block;
-  color: #c9a45c;
-}
-
-.section-heading p {
-  color: rgba(255,255,255,.68);
-  max-width: 600px;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.service-card {
-  position: relative;
-  padding: 40px 32px;
-  min-height: 330px;
-  background: #111111;
-  border: 1px solid rgba(201,164,92,.28);
-  border-radius: 16px;
-  color: #ffffff;
-  transition: transform .3s ease, border-color .3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  border-color: #c9a45c;
-}
-
-.service-number {
-  color: #c9a45c;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.service-line {
-  width: 45px;
-  height: 1px;
-  margin: 22px 0 25px;
-  background: #c9a45c;
-}
-
-.service-card h3 {
-  color: #ffffff;
-  font-size: 27px;
-  margin: 0 0 16px;
-}
-
-.service-card p {
-  color: rgba(255,255,255,.65);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.service-card a {
-  color: #c9a45c;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-}
-
-@media (max-width: 800px) {
-  .services {
-    padding: 80px 0;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    min-height: auto;
-  }
+.card p{
+  color:#69635c;
 }
 </style>
 </head>
@@ -840,58 +758,62 @@ We'll help you get the right quote.
       </p>
     </div>
 
-    <div class="service-grid">
+   <section class="cream" id="services">
 
-      <div class="service-card">
-        <div class="service-number">01</div>
-        <div class="service-line"></div>
+<div class="wrap">
 
-        <h3>DTF Gang Sheets</h3>
+<div class="section-head">
 
-        <p>
-          Arrange multiple designs for efficient printing.
-          Perfect for clothing brands, creators and
-          production runs.
-        </p>
-
-        <a href="#quote">GET A QUOTE →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-number">02</div>
-        <div class="service-line"></div>
-
-        <h3>Custom Apparel</h3>
-
-        <p>
-          Custom T-shirts and apparel featuring your
-          artwork, logos, graphics and original designs.
-        </p>
-
-        <a href="#quote">GET A QUOTE →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-number">03</div>
-        <div class="service-line"></div>
-
-        <h3>Bulk Orders</h3>
-
-        <p>
-          Need a larger quantity? We help brands,
-          businesses, teams and creators bring
-          production orders to life.
-        </p>
-
-        <a href="#quote">GET A QUOTE →</a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+<div class="eyebrow" style="color:#a47726">
+What We Do
 </div>
 
+<h2>
+Printing that helps your ideas stand out.
+</h2>
+
+<p>
+Tell us what you're making and how many you need.
+We'll help you get the right quote.
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="number">01</div>
+
+<h3>DTF Gang Sheets</h3>
+
+<p>
+Arrange multiple designs for printing.
+Great for creators, clothing brands and production runs.
+</p>
+
+</div>
+
+<div class="card">
+<div class="number">02</div>
+
+<h3>Custom Apparel</h3>
+
+<p>
+Custom T-shirts and apparel featuring your artwork,
+logos, graphics and original designs.
+</p>
+
+</div>
+
+<div class="card">
+<div class="number">03</div>
+
+<h3>Bulk Orders</h3>
+
+<p>
+Large quantity order? Send the details and
+ask for a custom quote.
+</p>
 </div>
 </div>
 </section>
