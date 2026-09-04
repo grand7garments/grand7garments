@@ -817,40 +817,46 @@ right:10px;
 
 }
 
-/* ===== FINAL HERO FIX ===== */
+/* ===== GRANDIOSE HERO — WIDE / HIGH IMAGE ===== */
 
 .hero .wrap{
   display:grid;
-  grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns:0.88fr 1.12fr;
   align-items:center;
-  gap:55px;
+  gap:35px;
+  width:92%;
+  max-width:1400px;
 }
 
-/* Keep the text balanced */
+/* LEFT SIDE */
 .hero-content{
   max-width:650px;
   padding:70px 0;
 }
 
-/* Remove the old showcase-box look from the hero */
+/* RIGHT SIDE */
 .hero .visual{
   min-height:0;
   width:100%;
   border:none;
   border-radius:0;
   background:none;
+  padding:0;
+  margin:0;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  padding:0;
+  overflow:visible;
+
+  /* moves image UP */
+  transform:translateY(-45px);
 }
 
-/* Make the actual garment image large and clean */
+/* BIGGER + LONGER IMAGE */
 .hero .visual img{
   display:block;
-  width:100%;
-  max-width:650px;
+  width:115%;
+  max-width:none;
   height:auto;
   object-fit:contain;
   border:none;
@@ -859,54 +865,51 @@ right:10px;
   filter:drop-shadow(0 25px 35px rgba(0,0,0,.55));
 }
 
-/* Desktop balance */
+/* DESKTOP */
 @media (min-width:901px){
   .hero{
     min-height:750px;
   }
 
   .hero .visual{
-    transform:translateY(5px);
+    transform:translateY(-55px);
   }
 
   .hero .visual img{
-    max-width:680px;
+    width:120%;
   }
 }
 
-/* Tablet / phone */
+/* TABLET */
 @media (max-width:850px){
   .hero .wrap{
     grid-template-columns:1fr;
-    gap:25px;
+    gap:15px;
   }
 
   .hero-content{
     padding:65px 0 10px;
-    max-width:100%;
   }
 
   .hero .visual{
-    padding:0 0 45px;
+    transform:translateY(-15px);
   }
 
   .hero .visual img{
     width:100%;
-    max-width:600px;
+    max-width:650px;
   }
 }
 
+/* PHONE */
 @media (max-width:550px){
-  .hero .wrap{
-    gap:10px;
-  }
-
-  .hero-content{
-    padding:55px 0 5px;
+  .hero .visual{
+    transform:translateY(-10px);
   }
 
   .hero .visual img{
-    max-width:100%;
+    width:105%;
+    max-width:none;
   }
 }
 
