@@ -159,29 +159,21 @@ column-gap:22px;
 break-inside:avoid;
 margin-bottom:22px;
 }
-.visual{
-min-height:450px;
-border:1px solid #333;
-border-radius:14px;
-background:radial-gradient(circle,#3b3020,#17130e 40%,#0d0d0d 70%);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
 
 .showcase .visual{
-min-height:0;
-height:auto;
+width:100%;
+margin:0 0 22px;
 padding:0;
 overflow:hidden;
-align-self:start;
+border:1px solid #333;
+border-radius:14px;
+background:#17130e;
 }
 
 .showcase .visual img{
 width:100%;
 height:auto;
-object-fit:initial;
+object-fit:contain;
 border-radius:14px;
 display:block;
 transition:transform .3s ease;
