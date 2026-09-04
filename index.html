@@ -341,312 +341,6 @@ h1{font-size:53px}
 .quote-intro h2{font-size:40px}
 .form{padding:22px}
 }
-/* ===== PREMIUM FULL-SCREEN GALLERY ===== */
-
-.professional-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  width: 100%;
-  margin-top: 35px;
-}
-
-.gallery-item {
-  position: relative;
-  display: block;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,.12);
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform .5s ease, filter .4s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,.5);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-  filter: brightness(.72);
-}
-
-.gallery-item::after {
-  content: "VIEW";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  padding: 11px 22px;
-  border: 1px solid rgba(255,255,255,.55);
-  border-radius: 999px;
-  background: rgba(0,0,0,.65);
-  color: white;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  opacity: 0;
-  transition: .3s ease;
-  backdrop-filter: blur(8px);
-}
-
-.gallery-item:hover::after {
-  opacity: 1;
-}
-
-/* ===== FULL SCREEN VIEWER ===== */
-
-.gallery-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,.96);
-  padding: 30px;
-}
-
-.gallery-lightbox.active {
-  display: flex;
-}
-
-.lightbox-image {
-  max-width: 92vw;
-  max-height: 88vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 20px 70px rgba(0,0,0,.7);
-  user-select: none;
-}
-
-.lightbox-close {
-  position: fixed;
-  top: 22px;
-  right: 25px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 50%;
-  background: rgba(255,255,255,.08);
-  color: white;
-  font-size: 30px;
-  line-height: 42px;
-  cursor: pointer;
-  z-index: 10001;
-}
-
-.lightbox-prev,
-.lightbox-next {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 50%;
-  background: rgba(255,255,255,.08);
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 10001;
-}
-
-.lightbox-prev {
-  left: 22px;
-}
-
-.lightbox-next {
-  right: 22px;
-}
-
-.lightbox-counter {
-  position: fixed;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(255,255,255,.8);
-  font-size: 12px;
-  letter-spacing: 2px;
-  z-index: 10001;
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 900px) {
-  .professional-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
-
-@media (max-width: 550px) {
-  .professional-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 25px;
-  }
-
-  .gallery-item {
-    border-radius: 13px;
-    aspect-ratio: 4 / 5;
-  }
-
-  .gallery-item::after {
-    display: none;
-  }
-
-  .gallery-item:hover {
-    transform: none;
-  }
-
-  .gallery-lightbox {
-    padding: 10px;
-  }
-
-  .lightbox-image {
-    max-width: 96vw;
-    max-height: 82vh;
-    border-radius: 6px;
-  }
-
-  .lightbox-close {
-    top: 15px;
-    right: 15px;
-    width: 44px;
-    height: 44px;
-  }
-
-  .lightbox-prev,
-  .lightbox-next {
-    width: 42px;
-    height: 42px;
-    font-size: 22px;
-  }
-
-  .lightbox-prev {
-    left: 10px;
-  }
-
-  .lightbox-next {
-    right: 10px;
-  }
-}
-/* GRANDIOSE HERO IMAGE */
-
-.hero .wrap {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  background: rgba(201, 164, 92, 0.15);
-  filter: blur(80px);
-  border-radius: 50%;
-}
-
-.hero-visual img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 650px;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 0 65px rgba(201, 164, 92, 0.18);
-}
-/* DESKTOP HERO LAYOUT */
-.hero .wrap {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  align-items: center;
-  gap: 20px;
-}
-
-.hero-visual {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  transform: translateY(-25px);
-}}
-
-.hero-visual img {
-  width: 100%;
-  max-width: 780px;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 0 70px rgba(201, 164, 92, 0.20);
-}
-
-@media (max-width: 800px) {
-  .hero .wrap {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .hero-visual {
-    justify-content: center;
-  }
-
-  .hero-visual img {
-    max-width: 100%;
-  }
-}
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.card{
-  background:white;
-  border:1px solid #dfd3c0;
-  border-radius:12px;
-  padding:30px;
-}
-
-.number{
-  color:#a47726;
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:2px;
-}
-
-.card h3{
-  font:700 25px Georgia,serif;
-  margin:10px 0;
-}
-
-.card p{
-  color:#69635c;
-}
 </style>
 </head>
 
@@ -656,8 +350,8 @@ h1{font-size:53px}
 <div class="wrap">
 <nav>
 <a href="#home" class="logo">
-  GRANDIOSE
-  <span>GARMENTS</span>
+GRANDIOSE
+<span>GARMENTS</span>
 </a>
 
 <div class="navlinks">
@@ -682,33 +376,24 @@ h1{font-size:53px}
 Los Angeles • Custom Apparel • DTF Printing
 </div>
 
-<div class="hero-brand">GRANDIOSE GARMENTS</div>
-
 <h1>
-Make Your Brand
-<span>Look Grandiose.</span>
+Make Your Brand Look Grandiose.
 </h1>
 
 <p>
-Premium custom apparel, DTF printing and gang sheets
-for clothing brands, creators, teams and businesses.
-Quality prints. Consistent results. Built to stand out.
+Custom apparel, DTF printing and gang sheets for creators,
+clothing brands, teams and businesses. Quality work,
+competitive pricing and bulk orders welcome.
 </p>
 
 <div class="actions">
-<a class="btn gold" href="#quote">
-GET A QUOTE
+<a class="btn gold" href="tel:+12137942035">
+CALL / TEXT
 </a>
 
-<a class="btn" href="#work">
-VIEW OUR WORK
+<a class="btn" href="#quote">
+REQUEST A QUOTE
 </a>
-</div>
-
-</div>
-
-<div class="hero-visual">
-  <img src="hero-garments.PNG" alt="Grandiose Garments custom apparel">
 </div>
 
 <div class="trust">
@@ -740,111 +425,40 @@ We'll help you get the right quote.
 </p>
 </div>
 
-<section class="services" id="services">
-  <div class="wrap">
-
-    <div class="section-heading">
-      <div class="eyebrow">WHAT WE DO</div>
-
-      <h2>
-        Printing that helps
-        <span>your ideas stand out.</span>
-      </h2>
-
-      <p>
-        From one custom piece to full production runs,
-        we create quality apparel and DTF transfers
-        built around your brand.
-      </p>
-    </div>
-
-   <section class="cream" id="services">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div class="eyebrow" style="color:#a47726">
-What We Do
-</div>
-
-<h2>
-Printing that helps your ideas stand out.
-</h2>
-
-<p>
-Tell us what you're making and how many you need.
-We'll help you get the right quote.
-</p>
-
-</div>
-
-<section class="cream" id="services">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div class="eyebrow" style="color:#a47726">
-What We Do
-</div>
-
-<h2>
-Printing that helps your ideas stand out.
-</h2>
-
-<p>
-Tell us what you're making and how many you need.
-We'll help you get the right quote.
-</p>
-
-</div>
-
 <div class="services">
 
 <div class="card">
 <div class="number">01</div>
-
 <h3>DTF Gang Sheets</h3>
-
 <p>
 Arrange multiple designs for printing.
 Great for creators, clothing brands and production runs.
 </p>
-
 </div>
 
 <div class="card">
 <div class="number">02</div>
-
 <h3>Custom Apparel</h3>
-
 <p>
 Custom T-shirts and apparel featuring your artwork,
 logos, graphics and original designs.
 </p>
-
 </div>
 
 <div class="card">
 <div class="number">03</div>
-
 <h3>Bulk Orders</h3>
-
 <p>
 Large quantity order? Send the details and
 ask for a custom quote.
 </p>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-</div>
+
 <section class="dark" id="work">
 <div class="wrap">
 
@@ -861,123 +475,18 @@ More finished-work photos can be added here.
 </p>
 </div>
 
-<div class="showcase professional-gallery">
+<div class="showcase">
 
-  <div class="gallery-item" data-image="work1.JPG">
-    <img src="work1.JPG" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work2.jpg">
-    <img src="work2.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work3.jpg">
-    <img src="work3.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work4.jpg">
-    <img src="work4.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work5.jpg">
-    <img src="work5.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work6.jpg">
-    <img src="work6.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work7.png">
-    <img src="work7.png" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work8.png">
-    <img src="work8.png" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work9.jpg">
-    <img src="work9.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work10.jpg">
-    <img src="work10.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work11.jpg">
-    <img src="work11.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work12.jpg">
-    <img src="work12.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work13.jpg">
-    <img src="work13.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work14.PNG">
-    <img src="work14.PNG" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work15.jpg">
-    <img src="work15.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work16.jpg">
-    <img src="work16.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work17.jpg">
-    <img src="work17.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work18.jpg">
-    <img src="work18.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work19.jpg">
-    <img src="work19.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work20.jpg">
-    <img src="work20.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work21.jpg">
-    <img src="work21.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work22.PNG">
-    <img src="work22.PNG" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work23.jpg">
-    <img src="work23.jpg" alt="Grandiose Garments custom work">
-  </div>
-
-  <div class="gallery-item" data-image="work24.jpg">
-    <img src="work24.jpg" alt="Grandiose Garments custom work">
-  </div>
-
+<div class="visual">
+<div>
+<div class="visual-title">GRANDIOSE</div>
+<div class="visual-sub">GARMENTS</div>
+<div class="visual-note">
+CUSTOM APPAREL • DTF PRINTING
+</div>
+</div>
 </div>
 
-<!-- FULL SCREEN GALLERY -->
-<div class="gallery-lightbox" id="galleryLightbox">
-
-  <button class="lightbox-close" id="lightboxClose">×</button>
-
-  <button class="lightbox-prev" id="lightboxPrev">‹</button>
-
-  <img class="lightbox-image" id="lightboxImage" src="" alt="Grandiose Garments work">
-
-  <button class="lightbox-next" id="lightboxNext">›</button>
-
-  <div class="lightbox-counter" id="lightboxCounter">
-    1 / 24
-  </div>
-
-</div>
-  
 <div class="copy">
 
 <div class="eyebrow">
@@ -1288,103 +797,6 @@ subject+"&body="+body;
 
 });
 </script>
-<script>
-const galleryItems = document.querySelectorAll(".gallery-item");
-const lightbox = document.getElementById("galleryLightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const closeButton = document.getElementById("lightboxClose");
-const prevButton = document.getElementById("lightboxPrev");
-const nextButton = document.getElementById("lightboxNext");
-const counter = document.getElementById("lightboxCounter");
 
-let currentImage = 0;
-
-function showImage(index) {
-  if (index < 0) {
-    index = galleryItems.length - 1;
-  }
-
-  if (index >= galleryItems.length) {
-    index = 0;
-  }
-
-  currentImage = index;
-
-  const image = galleryItems[currentImage].dataset.image;
-
-  lightboxImage.src = image;
-  counter.textContent = (currentImage + 1) + " / " + galleryItems.length;
-
-  lightbox.classList.add("active");
-  document.body.style.overflow = "hidden";
-}
-
-function closeGallery() {
-  lightbox.classList.remove("active");
-  document.body.style.overflow = "";
-  lightboxImage.src = "";
-}
-
-galleryItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    showImage(index);
-  });
-});
-
-nextButton.addEventListener("click", (event) => {
-  event.stopPropagation();
-  showImage(currentImage + 1);
-});
-
-prevButton.addEventListener("click", (event) => {
-  event.stopPropagation();
-  showImage(currentImage - 1);
-});
-
-closeButton.addEventListener("click", closeGallery);
-
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) {
-    closeGallery();
-  }
-});
-
-document.addEventListener("keydown", (event) => {
-  if (!lightbox.classList.contains("active")) return;
-
-  if (event.key === "Escape") {
-    closeGallery();
-  }
-
-  if (event.key === "ArrowRight") {
-    showImage(currentImage + 1);
-  }
-
-  if (event.key === "ArrowLeft") {
-    showImage(currentImage - 1);
-  }
-});
-
-/* MOBILE SWIPE */
-
-let touchStartX = 0;
-
-lightbox.addEventListener("touchstart", (event) => {
-  touchStartX = event.changedTouches[0].screenX;
-});
-
-lightbox.addEventListener("touchend", (event) => {
-  const touchEndX = event.changedTouches[0].screenX;
-  const difference = touchStartX - touchEndX;
-
-  if (Math.abs(difference) < 50) return;
-
-  if (difference > 0) {
-    showImage(currentImage + 1);
-  } else {
-    showImage(currentImage - 1);
-  }
-});
-</script>
 </body>
 </html>
