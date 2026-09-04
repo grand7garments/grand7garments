@@ -3,530 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Grandiose Garments | Custom Apparel & DTF Printing</title>
-<meta name="description" content="Grandiose Garments — premium custom apparel, DTF printing, gang sheets, bulk and wholesale orders.">
+<meta name="description" content="Grandiose Garments — custom apparel, DTF printing, gang sheets and bulk orders in Los Angeles.">
+<title>Grandiose Garments | Custom Apparel</title>
 
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+:root{
+--black:#080808;
+--dark:#111;
+--gold:#d5ab55;
+--gold-light:#f0d58f;
+--cream:#f7f0e5;
+--white:#fff;
+--gray:#bdb7ae;
 }
-
-html {
-scroll-behavior: smooth;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+background:var(--black);
+color:white;
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.6;
 }
+a{text-decoration:none;color:inherit}
+.wrap{width:92%;max-width:1150px;margin:auto}
 
-body {
-font-family: Arial, Helvetica, sans-serif;
-background: #080808;
-color: #f5f5f5;
-line-height: 1.6;
+header{
+position:sticky;
+top:0;
+z-index:99;
+background:rgba(8,8,8,.95);
+border-bottom:1px solid #292929;
 }
-
-a {
-color: inherit;
-text-decoration: none;
+nav{
+min-height:75px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
-
-.gold {
-color: #d4af37;
+.logo{
+font:bold 21px Georgia,serif;
+letter-spacing:3px;
 }
-
-.container {
-width: min(1180px, 92%);
-margin: auto;
+.logo span{
+display:block;
+color:var(--gold-light);
+text-align:center;
+font:10px Arial,sans-serif;
+letter-spacing:5px;
 }
-
-/* HEADER */
-header {
-position: sticky;
-top: 0;
-z-index: 1000;
-background: rgba(8, 8, 8, 0.95);
-border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-backdrop-filter: blur(12px);
+.navlinks{
+display:flex;
+gap:24px;
+font-size:14px;
 }
+.navlinks a:hover{color:var(--gold-light)}
 
-.nav {
-min-height: 76px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 30px;
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 20px;
+border:1px solid var(--gold);
+font-size:13px;
+font-weight:bold;
+letter-spacing:.7px;
+cursor:pointer;
 }
+.btn.gold{background:var(--gold);color:#111}
 
-.logo {
-font-size: 20px;
-font-weight: 900;
-letter-spacing: 2px;
-}
-
-.logo span {
-color: #d4af37;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 28px;
-font-size: 14px;
-}
-
-nav a {
-color: #ddd;
-transition: .25s;
-}
-
-nav a:hover {
-color: #d4af37;
-}
-
-.nav-btn {
-padding: 11px 18px;
-border: 1px solid #d4af37;
-color: #d4af37;
-border-radius: 4px;
-}
-
-.nav-btn:hover {
-background: #d4af37;
-color: #080808;
-}
-
-/* HERO */
-.hero {
-min-height: 88vh;
-display: flex;
-align-items: center;
+.hero{
+min-height:750px;
+display:flex;
+align-items:center;
 background:
-radial-gradient(circle at 80% 20%, rgba(212,175,55,.12), transparent 35%),
-linear-gradient(135deg, #080808 0%, #111 55%, #080808 100%);
-}
-
-.hero-content {
-max-width: 850px;
-padding: 90px 0;
-}
-
-.eyebrow {
-color: #d4af37;
-text-transform: uppercase;
-letter-spacing: 3px;
-font-size: 12px;
-font-weight: bold;
-margin-bottom: 20px;
-}
-
-h1 {
-font-size: clamp(48px, 8vw, 92px);
-line-height: .95;
-letter-spacing: -3px;
-margin-bottom: 28px;
-}
-
-h1 span {
-color: #d4af37;
-}
-
-.hero p {
-max-width: 680px;
-color: #bdbdbd;
-font-size: 19px;
-margin-bottom: 34px;
-}
-
-.buttons {
-display: flex;
-gap: 14px;
-flex-wrap: wrap;
-}
-
-.btn {
-display: inline-block;
-padding: 14px 24px;
-border-radius: 4px;
-font-weight: bold;
-font-size: 14px;
-transition: .25s;
-}
-
-.btn-gold {
-background: #d4af37;
-color: #080808;
-}
-
-.btn-gold:hover {
-transform: translateY(-2px);
-background: #e4c354;
-}
-
-.btn-outline {
-border: 1px solid #555;
-color: #fff;
-}
-
-.btn-outline:hover {
-border-color: #d4af37;
-color: #d4af37;
-}
-
-/* SECTIONS */
-section {
-padding: 100px 0;
-}
-
-.section-label {
-color: #d4af37;
-font-size: 12px;
-text-transform: uppercase;
-letter-spacing: 3px;
-font-weight: bold;
-margin-bottom: 12px;
-}
-
-h2 {
-font-size: clamp(34px, 5vw, 58px);
-line-height: 1;
-margin-bottom: 18px;
-}
-
-.section-intro {
-color: #999;
-max-width: 650px;
-margin-bottom: 50px;
-}
-
-/* SERVICES */
-.services {
-background: #0d0d0d;
-}
-
-.service-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-
-.service-card {
-border: 1px solid #242424;
-background: #111;
-padding: 32px;
-min-height: 230px;
-transition: .3s;
-}
-
-.service-card:hover {
-border-color: #d4af37;
-transform: translateY(-4px);
-}
-
-.number {
-color: #d4af37;
-font-size: 13px;
-letter-spacing: 2px;
-margin-bottom: 30px;
-}
-
-.service-card h3 {
-font-size: 23px;
-margin-bottom: 12px;
-}
-
-.service-card p {
-color: #999;
-}
-
-/* GALLERY */
-.work {
-background: #080808;
-}
-
-.gallery {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 16px;
-}
-
-.gallery-item {
-aspect-ratio: 1 / 1;
-overflow: hidden;
-border-radius: 8px;
-border: 1px solid #222;
-background: #111;
-cursor: pointer;
-}
-
-.gallery-item img {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
-transition: transform .45s ease;
-}
-
-.gallery-item:hover img {
-transform: scale(1.06);
-}
-
-/* WHY US */
-.why {
-background: #0d0d0d;
-}
-
-.why-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 60px;
-align-items: center;
-}
-
-.statement {
-font-size: clamp(28px, 4vw, 48px);
-line-height: 1.15;
-}
-
-.statement span {
-color: #d4af37;
-}
-
-.features {
-display: grid;
-gap: 18px;
-}
-
-.feature {
-border-bottom: 1px solid #292929;
-padding: 18px 0;
-}
-
-.feature strong {
-display: block;
-color: #d4af37;
-margin-bottom: 5px;
-}
-
-.feature p {
-color: #999;
-}
-
-/* PROCESS */
-.process-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
-}
-
-.step {
-border-top: 1px solid #d4af37;
-padding-top: 22px;
-}
-
-.step-num {
-color: #d4af37;
-font-size: 13px;
-letter-spacing: 2px;
-margin-bottom: 20px;
-}
-
-.step h3 {
-margin-bottom: 8px;
-}
-
-.step p {
-color: #999;
-font-size: 14px;
-}
-
-/* WHOLESALE */
-.wholesale {
-background:
-linear-gradient(rgba(8,8,8,.9), rgba(8,8,8,.95)),
-radial-gradient(circle at center, rgba(212,175,55,.16), transparent 55%);
-border-top: 1px solid #222;
-border-bottom: 1px solid #222;
-}
-
-.wholesale-box {
-text-align: center;
-max-width: 850px;
-margin: auto;
-}
-
-.wholesale-box p {
-color: #aaa;
-font-size: 18px;
-margin: 0 auto 30px;
-max-width: 650px;
-}
-
-/* QUOTE */
-.quote {
-background: #0d0d0d;
-}
-
-.quote-grid {
-display: grid;
-grid-template-columns: .8fr 1.2fr;
-gap: 60px;
-}
-
-.quote-copy p {
-color: #999;
-margin-top: 20px;
-}
-
-form {
-display: grid;
-gap: 15px;
-}
-
-input,
-select,
-textarea {
-width: 100%;
-padding: 15px;
-background: #151515;
-border: 1px solid #303030;
-color: #fff;
-border-radius: 4px;
-font: inherit;
-}
-
-textarea {
-min-height: 150px;
-resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-outline: none;
-border-color: #d4af37;
-}
-
-/* CONTACT */
-.contact {
-text-align: center;
-padding-bottom: 70px;
-}
-
-.contact-info {
-display: flex;
-justify-content: center;
-gap: 35px;
-flex-wrap: wrap;
-margin-top: 30px;
-color: #aaa;
-}
-
-.contact-info a:hover {
-color: #d4af37;
-}
-
-/* FOOTER */
-footer {
-border-top: 1px solid #222;
-padding: 30px 0;
-color: #777;
-font-size: 13px;
-text-align: center;
-}
-
-/* LIGHTBOX */
-.lightbox {
-position: fixed;
-inset: 0;
-background: rgba(0,0,0,.94);
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 2000;
-padding: 25px;
-}
-
-.lightbox.active {
-display: flex;
-}
-
-.lightbox img {
-max-width: 95%;
-max-height: 90vh;
-object-fit: contain;
-border: 1px solid #333;
-}
-
-.close {
-position: absolute;
-top: 20px;
-right: 28px;
-font-size: 38px;
-color: #d4af37;
-cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-nav a:not(.nav-btn) {
-display: none;
-}
-
-.service-grid {
-grid-template-columns: 1fr;
-}
-
-.gallery {
-grid-template-columns: repeat(2, 1fr);
-}
-
-.why-grid,
-.quote-grid {
-grid-template-columns: 1fr;
-}
-
-.process-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-
-@media (max-width: 550px) {
-.nav {
-min-height: 68px;
-}
-
-.logo {
-font-size: 16px;
-}
-
-section {
-padding: 70px 0;
-}
-
-.hero {
-min-height: 80vh;
-}
-
-h1 {
-letter-spacing: -2px;
-}
-
-.hero p {
-font-size: 16px;
-}
-
-.gallery {
-gap: 9px;
-}
-
-.process-grid {
-grid-template-columns: 1fr;
-}
-
-.contact-info {
-flex-direction: column;
-gap: 12px;
-}
+radial-gradient(circle at 80% 25%,rgba(213,171,85,.25),transparent 30%),
+linear-gradient(135deg,#080808,#17120a);
+}
+.hero-content{max-width:800px;padding:100px 0}
+.eyebrow{
+color:var(--gold-light);
+font-size:11px;
+font-weight:bold;
+letter-spacing:4px;
+text-transform:uppercase;
+}
+h1{
+font:700 clamp(50px,8vw,88px)/.94 Georgia,serif;
+margin:18px 0 25px;
+}
+.hero p{
+color:#d5d1cb;
+font-size:19px;
+max-width:700px;
+line-height:1.75;
+}
+.actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:30px;
+}
+.trust{
+display:flex;
+flex-wrap:wrap;
+gap:22px;
+margin-top:35px;
+color:#bbb;
+font-size:13px;
+}
+
+section{padding:85px 0}
+.cream{background:var(--cream);color:#111}
+.dark{background:#101010}
+
+.section-head{
+max-width:720px;
+margin-bottom:40px;
+}
+.section-head h2{
+font:700 45px/1.05 Georgia,serif;
+margin:10px 0 15px;
+}
+.section-head p{color:#69635c}
+.dark .section-head p{color:#bbb}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+.card{
+background:white;
+border:1px solid #dfd3c0;
+border-radius:12px;
+padding:30px;
+}
+.number{
+color:#a47726;
+font-size:12px;
+font-weight:bold;
+letter-spacing:2px;
+}
+.card h3{
+font:700 25px Georgia,serif;
+margin:10px 0;
+}
+.card p{color:#69635c}
+
+.showcase{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:22px;
+}
+.visual{
+min-height:450px;
+border:1px solid #333;
+border-radius:14px;
+background:radial-gradient(circle,#3b3020,#17130e 40%,#0d0d0d 70%);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+.visual-title{
+font:700 38px Georgia,serif;
+letter-spacing:3px;
+}
+.visual-sub{
+color:var(--gold-light);
+letter-spacing:4px;
+font-size:11px;
+}
+.visual-note{
+margin-top:30px;
+color:#aaa;
+font-size:12px;
+}
+.copy{
+border:1px solid #303030;
+border-radius:14px;
+padding:40px;
+background:#141414;
+}
+.copy h3{
+font:700 38px Georgia,serif;
+margin:10px 0 18px;
+}
+.copy p{
+color:#c2bdb5;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+.step{
+border-top:1px solid #caa653;
+padding-top:20px;
+}
+.step h3{
+font:700 22px Georgia,serif;
+margin:9px 0;
+}
+.step p{color:#69635c}
+
+.quote-section{background:#0d0d0d}
+.quote-grid{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:25px;
+}
+.quote-intro h2{
+font:700 48px/1.05 Georgia,serif;
+margin:10px 0 20px;
+}
+.quote-intro p{color:#bbb;line-height:1.8}
+.quote-points{
+display:grid;
+gap:10px;
+margin-top:25px;
+color:#ddd;
+}
+
+.form{
+background:var(--cream);
+color:#111;
+border-radius:14px;
+padding:30px;
+}
+.form h3{
+font:700 30px Georgia,serif;
+margin-bottom:5px;
+}
+.form-note{
+color:#69635c;
+font-size:13px;
+margin-bottom:20px;
+}
+.fields{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+}
+.field{
+display:grid;
+gap:7px;
+}
+.field.full{grid-column:1/-1}
+.field label{
+font-size:12px;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:.7px;
+}
+.field input,
+.field select,
+.field textarea{
+width:100%;
+padding:12px;
+border:1px solid #d4c7b4;
+border-radius:5px;
+background:white;
+color:#111;
+}
+.field textarea{
+min-height:120px;
+resize:vertical;
+}
+.form small{
+display:block;
+color:#777;
+margin-top:10px;
+}
+
+.contacts{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+.contact{
+border:1px solid #292929;
+border-radius:10px;
+padding:22px;
+background:#121212;
+}
+.contact small{
+color:var(--gold-light);
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.contact h3{
+font:700 20px Georgia,serif;
+margin-top:8px;
+}
+.contact a:hover{color:var(--gold-light)}
+
+footer{
+border-top:1px solid #292929;
+padding:40px 0;
+color:#999;
+}
+.footer{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+.footer strong{
+color:white;
+letter-spacing:2px;
+}
+
+@media(max-width:850px){
+.navlinks{display:none}
+.services,
+.showcase,
+.steps,
+.quote-grid,
+.contacts{
+grid-template-columns:1fr;
+}
+.fields{grid-template-columns:1fr}
+.field.full{grid-column:auto}
+}
+
+@media(max-width:550px){
+section{padding:65px 0}
+.hero{min-height:700px}
+.hero-content{padding:80px 0}
+h1{font-size:53px}
+.hero p{font-size:17px}
+.section-head h2{font-size:36px}
+.quote-intro h2{font-size:40px}
+.form{padding:22px}
 }
 </style>
 </head>
@@ -534,112 +347,110 @@ gap: 12px;
 <body>
 
 <header>
-<div class="container nav">
-<a href="#" class="logo">GRANDIOSE <span>GARMENTS</span></a>
-
+<div class="wrap">
 <nav>
+<a href="#home" class="logo">
+GRANDIOSE
+<span>GARMENTS</span>
+</a>
+
+<div class="navlinks">
 <a href="#services">Services</a>
 <a href="#work">Our Work</a>
 <a href="#process">How It Works</a>
-<a href="#wholesale">Wholesale</a>
-<a href="#quote" class="nav-btn">Get a Quote</a>
+<a href="#quote">Get a Quote</a>
+</div>
+
+<a class="btn gold" href="#quote">GET A QUOTE</a>
 </nav>
 </div>
 </header>
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container hero-content">
+<section class="hero" id="home">
+<div class="wrap">
+<div class="hero-content">
 
-<div class="eyebrow">Los Angeles • Custom Apparel • DTF Printing</div>
+<div class="eyebrow">
+Los Angeles • Custom Apparel • DTF Printing
+</div>
 
 <h1>
-YOUR VISION.<br>
-<span>OUR CRAFT.</span>
+Make Your Brand Look Grandiose.
 </h1>
 
 <p>
-Premium custom apparel, DTF printing and gang sheets
-for creators, clothing brands, teams and businesses.
+Custom apparel, DTF printing and gang sheets for creators,
+clothing brands, teams and businesses. Quality work,
+competitive pricing and bulk orders welcome.
 </p>
 
-<div class="buttons">
-<a href="#quote" class="btn btn-gold">GET A QUOTE</a>
-<a href="#work" class="btn btn-outline">VIEW OUR WORK</a>
+<div class="actions">
+<a class="btn gold" href="tel:+12137942035">
+CALL / TEXT
+</a>
+
+<a class="btn" href="#quote">
+REQUEST A QUOTE
+</a>
 </div>
 
+<div class="trust">
+<span>✓ Custom Orders</span>
+<span>✓ Bulk Orders</span>
+<span>✓ Fast Shipping</span>
+</div>
+
+</div>
 </div>
 </section>
 
 
-<!-- SERVICES -->
-<section class="services" id="services">
-<div class="container">
+<section class="cream" id="services">
+<div class="wrap">
 
-<div class="section-label">What We Do</div>
+<div class="section-head">
+<div class="eyebrow" style="color:#a47726">
+What We Do
+</div>
 
-<h2>Built to make your brand stand out.</h2>
+<h2>
+Printing that helps your ideas stand out.
+</h2>
 
-<p class="section-intro">
-From individual pieces to full production runs,
-Grandiose Garments delivers quality and consistency.
+<p>
+Tell us what you're making and how many you need.
+We'll help you get the right quote.
 </p>
+</div>
 
-<div class="service-grid">
+<div class="services">
 
-<div class="service-card">
+<div class="card">
 <div class="number">01</div>
+<h3>DTF Gang Sheets</h3>
+<p>
+Arrange multiple designs for printing.
+Great for creators, clothing brands and production runs.
+</p>
+</div>
+
+<div class="card">
+<div class="number">02</div>
 <h3>Custom Apparel</h3>
 <p>
-Custom T-shirts, hoodies and garments featuring
-your artwork, graphics and original designs.
+Custom T-shirts and apparel featuring your artwork,
+logos, graphics and original designs.
 </p>
 </div>
 
-<div class="service-card">
-<div class="number">02</div>
-<h3>DTF Printing</h3>
-<p>
-High-quality DTF transfers with vibrant prints
-designed for professional apparel production.
-</p>
-</div>
-
-<div class="service-card">
+<div class="card">
 <div class="number">03</div>
-<h3>Gang Sheets</h3>
-<p>
-Multiple designs arranged efficiently for creators,
-clothing brands and production runs.
-</p>
-</div>
-
-<div class="service-card">
-<div class="number">04</div>
 <h3>Bulk Orders</h3>
 <p>
-Larger quantities for brands, teams, businesses
-and events.
-</p>
-</div>
-
-<div class="service-card">
-<div class="number">05</div>
-<h3>Wholesale</h3>
-<p>
-Reliable production support for brands looking
-for consistent apparel printing.
-</p>
-</div>
-
-<div class="service-card">
-<div class="number">06</div>
-<h3>Custom Projects</h3>
-<p>
-Have something different in mind?
-Tell us what you're creating and we'll help.
+Large quantity order? Send the details and
+ask for a custom quote.
 </p>
 </div>
 
@@ -648,132 +459,111 @@ Tell us what you're creating and we'll help.
 </section>
 
 
-<!-- OUR WORK -->
-<section class="work" id="work">
-<div class="container">
+<section class="dark" id="work">
+<div class="wrap">
 
-<div class="section-label">Our Work</div>
+<div class="section-head">
+<div class="eyebrow">Our Work</div>
 
-<h2>Quality you can see.</h2>
+<h2>
+Built around your design.
+</h2>
 
-<p class="section-intro">
-A look at some of our custom apparel, printing
-and production work.
+<p>
+We're growing the Grandiose Garments gallery.
+More finished-work photos can be added here.
 </p>
-
-<div class="gallery">
-
-<div class="gallery-item"><img src="work1.JPG" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work2.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work3.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work4.jpg" alt="Grandiose Garments work"></div>
-
-<div class="gallery-item"><img src="work5.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work6.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work7.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work8.jpg" alt="Grandiose Garments work"></div>
-
-<div class="gallery-item"><img src="work9.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work10.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work11.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work12.jpg" alt="Grandiose Garments work"></div>
-
-<div class="gallery-item"><img src="work13.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work14.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work15.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work16.jpg" alt="Grandiose Garments work"></div>
-
-<div class="gallery-item"><img src="work17.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work18.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work19.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work20.jpg" alt="Grandiose Garments work"></div>
-
-<div class="gallery-item"><img src="work21.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work22.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work23.jpg" alt="Grandiose Garments work"></div>
-<div class="gallery-item"><img src="work24.jpg" alt="Grandiose Garments work"></div>
-
 </div>
-</div>
-</section>
 
+<div class="showcase">
 
-<!-- WHY GRANDIOSE -->
-<section class="why">
-<div class="container why-grid">
-
+<div class="visual">
 <div>
-<div class="section-label">Why Grandiose</div>
-
-<div class="statement">
-We don't just copy and paste.
-<span>We focus on quality and consistency.</span>
+<div class="visual-title">GRANDIOSE</div>
+<div class="visual-sub">GARMENTS</div>
+<div class="visual-note">
+CUSTOM APPAREL • DTF PRINTING
 </div>
 </div>
-
-<div class="features">
-
-<div class="feature">
-<strong>QUALITY FIRST</strong>
-<p>We pay attention to the details behind every print.</p>
 </div>
 
-<div class="feature">
-<strong>CONSISTENT RESULTS</strong>
-<p>Our goal is dependable quality throughout your order.</p>
+<div class="copy">
+
+<div class="eyebrow">
+Custom Printing
 </div>
 
-<div class="feature">
-<strong>BUILT FOR BRANDS</strong>
-<p>Production support for creators and growing clothing brands.</p>
-</div>
+<h3>
+Your design deserves to be seen.
+</h3>
 
-<div class="feature">
-<strong>BULK FRIENDLY</strong>
-<p>From small projects to larger production orders.</p>
-</div>
+<p>
+From a single custom shirt to a larger production order,
+we make the process simple: send your details, get a quote,
+approve the order, and let us handle the print.
+</p>
 
+<p>
+<strong>Pricing:</strong>
+We don't use a one-size-fits-all price list.
+<strong>Just ask for a quote.</strong>
+</p>
+
+<a class="btn gold" href="#quote">
+START YOUR ORDER
+</a>
+
+</div>
 </div>
 </div>
 </section>
 
 
-<!-- PROCESS -->
-<section id="process">
-<div class="container">
+<section class="cream" id="process">
+<div class="wrap">
 
-<div class="section-label">How It Works</div>
+<div class="section-head">
+<div class="eyebrow" style="color:#a47726">
+How It Works
+</div>
 
-<h2>From idea to finished apparel.</h2>
+<h2>
+From idea to finished apparel.
+</h2>
+</div>
 
-<p class="section-intro">
-Simple, straightforward and designed around your project.
+<div class="steps">
+
+<div class="step">
+<div class="number">01</div>
+<h3>Send Details</h3>
+<p>
+Tell us what you're making, quantity and design information.
 </p>
-
-<div class="process-grid">
-
-<div class="step">
-<div class="step-num">01</div>
-<h3>Send Your Details</h3>
-<p>Tell us what you're making, quantity and design information.</p>
 </div>
 
 <div class="step">
-<div class="step-num">02</div>
-<h3>Get Your Quote</h3>
-<p>We'll review your project and provide pricing.</p>
+<div class="number">02</div>
+<h3>Get a Quote</h3>
+<p>
+We'll review your project and provide pricing.
+</p>
 </div>
 
 <div class="step">
-<div class="step-num">03</div>
+<div class="number">03</div>
 <h3>Approve</h3>
-<p>Confirm your order details before production begins.</p>
+<p>
+Confirm the order details before production begins.
+</p>
 </div>
 
 <div class="step">
-<div class="step-num">04</div>
-<h3>Print & Deliver</h3>
-<p>Your order is produced and prepared for shipping or pickup.</p>
+<div class="number">04</div>
+<h3>Print & Ship</h3>
+<p>
+Your order is produced and prepared for shipping or pickup.
+</p>
 </div>
 
 </div>
@@ -781,95 +571,166 @@ Simple, straightforward and designed around your project.
 </section>
 
 
-<!-- WHOLESALE -->
-<section class="wholesale" id="wholesale">
-<div class="container wholesale-box">
+<section class="quote-section" id="quote">
+<div class="wrap">
 
-<div class="section-label">For Brands & Businesses</div>
+<div class="quote-grid">
 
-<h2>Ready to take your brand further?</h2>
+<div class="quote-intro">
 
-<p>
-Need consistent apparel production for your clothing brand,
-business, team or next collection?
-Let's talk about your order.
-</p>
-
-<a href="#quote" class="btn btn-gold">START A WHOLESALE QUOTE</a>
-
-</div>
-</section>
-
-
-<!-- QUOTE -->
-<section class="quote" id="quote">
-<div class="container quote-grid">
-
-<div class="quote-copy">
-<div class="section-label">Get a Quote</div>
-
-<h2>Let's make something Grandiose.</h2>
-
-<p>
-Tell us about your project and we'll review the details
-before you send your request.
-</p>
-
-<p>
-Custom apparel • DTF printing • Gang sheets • Bulk orders
-</p>
+<div class="eyebrow">
+Request a Quote
 </div>
 
-<form onsubmit="sendQuote(event)">
+<h2>
+Let's make something Grandiose.
+</h2>
 
-<input id="name" type="text" placeholder="Name *" required>
+<p>
+Fill out the form and your email app will prepare
+a message to grand7garments@gmail.com.
+You can review it before sending.
+</p>
 
-<input id="phone" type="tel" placeholder="Phone *" required>
+<div class="quote-points">
+<span>✓ Custom apparel</span>
+<span>✓ DTF gang sheets</span>
+<span>✓ Bulk orders</span>
+<span>✓ Pricing by quote</span>
+</div>
 
-<input id="email" type="email" placeholder="Email">
+</div>
+
+
+<form class="form" id="quoteForm">
+
+<h3>Quote Request</h3>
+
+<div class="form-note">
+Tell us about your project and we'll get back to you.
+</div>
+
+<div class="fields">
+
+<div class="field">
+<label for="name">Name *</label>
+<input id="name" required>
+</div>
+
+<div class="field">
+<label for="phone">Phone *</label>
+<input id="phone" type="tel" required>
+</div>
+
+<div class="field">
+<label for="email">Email</label>
+<input id="email" type="email">
+</div>
+
+<div class="field">
+<label for="service">What do you need?</label>
 
 <select id="service">
-<option value="">What do you need?</option>
-<option>Custom T-Shirts</option>
-<option>Custom Hoodies</option>
-<option>DTF Transfers</option>
-<option>Gang Sheets</option>
+<option>Custom Apparel</option>
+<option>DTF Gang Sheets</option>
 <option>Bulk Order</option>
-<option>Wholesale</option>
 <option>Other</option>
 </select>
+</div>
 
-<input id="quantity" type="text" placeholder="Quantity">
+<div class="field">
+<label for="quantity">Quantity</label>
+<input id="quantity" type="number" min="1" placeholder="e.g. 24">
+</div>
 
-<input id="garment" type="text" placeholder="Garment Type">
+<div class="field">
+<label for="garment">Garment Type</label>
+<input id="garment" placeholder="e.g. T-shirts">
+</div>
 
-<textarea id="details" placeholder="Tell us about your project *" required></textarea>
+<div class="field full">
+<label for="details">Project Details *</label>
 
-<button class="btn btn-gold" type="submit">
+<textarea
+id="details"
+required
+placeholder="Tell us about your design, sizes, colors, deadline, shipping/pickup, etc.">
+</textarea>
+</div>
+
+<div class="field full">
+<button class="btn gold" type="submit">
 PREPARE MY QUOTE REQUEST
 </button>
+</div>
+
+</div>
+
+<small>
+Your email app will open with the quote information already filled in.
+</small>
 
 </form>
 
 </div>
+</div>
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact">
-<div class="container">
+<section id="contact">
+<div class="wrap">
 
-<div class="section-label">Contact</div>
+<div class="section-head">
+<div class="eyebrow">Contact</div>
 
-<h2>Let's work together.</h2>
+<h2>
+Reach Grandiose Garments.
+</h2>
 
-<div class="contact-info">
-<a href="tel:2137942035">(213) 794-2035</a>
-<a href="tel:3235950008">(323) 595-0008</a>
-<a href="mailto:grand7garments@gmail.com">grand7garments@gmail.com</a>
-<a href="https://www.instagram.com/grand7garments" target="_blank">@grand7garments</a>
+<p>
+Call, text, email or send us a DM.
+</p>
 </div>
 
+<div class="contacts">
+
+<div class="contact">
+<small>Primary</small>
+<h3>
+<a href="tel:+12137942035">
+(213) 794-2035
+</a>
+</h3>
+</div>
+
+<div class="contact">
+<small>Alternate</small>
+<h3>
+<a href="tel:+13235950008">
+(323) 595-0008
+</a>
+</h3>
+</div>
+
+<div class="contact">
+<small>Email</small>
+<h3>
+<a href="mailto:grand7garments@gmail.com">
+grand7garments@gmail.com
+</a>
+</h3>
+</div>
+
+<div class="contact">
+<small>Instagram</small>
+<h3>
+<a href="https://www.instagram.com/grand7garments/" target="_blank">
+@grand7garments
+</a>
+</h3>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -877,71 +738,64 @@ PREPARE MY QUOTE REQUEST
 
 
 <footer>
-<div class="container">
-GRANDIOSE GARMENTS<br>
-Custom Apparel • DTF Printing • Gang Sheets<br><br>
-Los Angeles, California • © 2026 Grandiose Garments
+<div class="wrap footer">
+
+<div>
+<strong>GRANDIOSE GARMENTS</strong>
+<br>
+<small>
+Custom Apparel • DTF Printing • Gang Sheets
+</small>
+</div>
+
+<div>
+Los Angeles, California
+</div>
+
+<div>
+© 2026 Grandiose Garments
+</div>
+
 </div>
 </footer>
 
 
-<!-- IMAGE LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-<div class="close" onclick="closeLightbox()">×</div>
-<img id="lightboxImage" src="" alt="Grandiose Garments work">
-</div>
-
-
 <script>
+document.getElementById("quoteForm").addEventListener("submit",function(event){
 
-// Gallery lightbox
-document.querySelectorAll(".gallery-item img").forEach(function(image) {
-image.addEventListener("click", function() {
-document.getElementById("lightboxImage").src = this.src;
-document.getElementById("lightbox").classList.add("active");
-});
-});
-
-function closeLightbox() {
-document.getElementById("lightbox").classList.remove("active");
-}
-
-document.getElementById("lightbox").addEventListener("click", function(event) {
-if (event.target === this) {
-closeLightbox();
-}
-});
-
-
-// Quote email
-function sendQuote(event) {
 event.preventDefault();
 
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const email = document.getElementById("email").value;
-const service = document.getElementById("service").value;
-const quantity = document.getElementById("quantity").value;
-const garment = document.getElementById("garment").value;
-const details = document.getElementById("details").value;
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const email=document.getElementById("email").value.trim() || "Not provided";
+const service=document.getElementById("service").value;
+const quantity=document.getElementById("quantity").value || "Not provided";
+const garment=document.getElementById("garment").value.trim() || "Not provided";
+const details=document.getElementById("details").value.trim();
 
-const subject = "Grandiose Garments Quote Request";
+const subject=encodeURIComponent(
+"Grandiose Garments Quote Request - "+name
+);
 
-const body =
-"Name: " + name + "\n" +
-"Phone: " + phone + "\n" +
-"Email: " + email + "\n" +
-"Service: " + service + "\n" +
-"Quantity: " + quantity + "\n" +
-"Garment Type: " + garment + "\n\n" +
-"Project Details:\n" + details;
+const body=encodeURIComponent(
+"Hello Grandiose Garments,\n\n"+
+"I would like to request a quote.\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Email: "+email+"\n"+
+"Service: "+service+"\n"+
+"Quantity: "+quantity+"\n"+
+"Garment Type: "+garment+"\n\n"+
+"Project Details:\n"+
+details+
+"\n\nThank you!"
+);
 
-window.location.href =
-"mailto:grand7garments@gmail.com" +
-"?subject=" + encodeURIComponent(subject) +
-"&body=" + encodeURIComponent(body);
-}
+window.location.href=
+"mailto:grand7garments@gmail.com?subject="+
+subject+"&body="+body;
 
+});
 </script>
 
 </body>
