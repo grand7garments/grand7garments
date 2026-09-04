@@ -817,7 +817,7 @@ right:10px;
 
 }
 
-/* ===== BLENDED HERO IMAGE ===== */
+/* ===== FINAL HERO — LARGE, HIGH & STRONGLY BLENDED ===== */
 
 .hero .wrap{
   display:grid;
@@ -848,62 +848,40 @@ right:10px;
   justify-content:center;
   position:relative;
   z-index:1;
-  transform:translateY(-45px);
+  transform:translateY(-55px);
 }
 
 .hero .visual img{
   display:block;
   width:100%;
-  max-width:700px;
+  max-width:720px;
   height:auto;
   border:0;
   border-radius:0;
   box-shadow:none;
   object-fit:contain;
-
-  /* Fade the edges into the website */
-  -webkit-mask-image:
-    linear-gradient(to right,
-      transparent 0%,
-      black 9%,
-      black 91%,
-      transparent 100%),
-    linear-gradient(to bottom,
-      transparent 0%,
-      black 8%,
-      black 92%,
-      transparent 100%);
-
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right,
-      transparent 0%,
-      black 9%,
-      black 91%,
-      transparent 100%),
-    linear-gradient(to bottom,
-      transparent 0%,
-      black 8%,
-      black 92%,
-      transparent 100%);
-
-  mask-composite: intersect;
-
   filter:drop-shadow(0 25px 35px rgba(0,0,0,.6));
+
+  /* Strong fade into the black website */
+  -webkit-mask-image:radial-gradient(
+    ellipse at center,
+    black 38%,
+    rgba(0,0,0,.92) 50%,
+    rgba(0,0,0,.65) 65%,
+    rgba(0,0,0,.3) 80%,
+    transparent 100%
+  );
+
+  mask-image:radial-gradient(
+    ellipse at center,
+    black 38%,
+    rgba(0,0,0,.92) 50%,
+    rgba(0,0,0,.65) 65%,
+    rgba(0,0,0,.3) 80%,
+    transparent 100%
+  );
 }
 
-/* Desktop */
-@media(min-width:901px){
-  .hero .visual{
-    transform:translateY(-55px);
-  }
-
-  .hero .visual img{
-    max-width:720px;
-  }
-}
-
-/* Mobile */
 @media(max-width:850px){
   .hero .wrap{
     grid-template-columns:1fr;
@@ -921,6 +899,16 @@ right:10px;
   .hero .visual img{
     width:100%;
     max-width:650px;
+  }
+}
+
+@media(max-width:550px){
+  .hero .visual{
+    transform:translateY(-10px);
+  }
+
+  .hero .visual img{
+    width:105%;
   }
 }
 
