@@ -545,6 +545,57 @@ h1{font-size:53px}
     right: 10px;
   }
 }
+/* GRANDIOSE HERO IMAGE */
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background: rgba(201, 164, 92, 0.15);
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.hero-visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 65px rgba(201, 164, 92, 0.18);
+}
+
+@media (max-width: 800px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-visual img {
+    max-width: 100%;
+  }
+}
 </style>
 </head>
 
