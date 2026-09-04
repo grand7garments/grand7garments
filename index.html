@@ -817,6 +817,99 @@ right:10px;
 
 }
 
+/* ===== FINAL HERO FIX ===== */
+
+.hero .wrap{
+  display:grid;
+  grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items:center;
+  gap:55px;
+}
+
+/* Keep the text balanced */
+.hero-content{
+  max-width:650px;
+  padding:70px 0;
+}
+
+/* Remove the old showcase-box look from the hero */
+.hero .visual{
+  min-height:0;
+  width:100%;
+  border:none;
+  border-radius:0;
+  background:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0;
+}
+
+/* Make the actual garment image large and clean */
+.hero .visual img{
+  display:block;
+  width:100%;
+  max-width:650px;
+  height:auto;
+  object-fit:contain;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  filter:drop-shadow(0 25px 35px rgba(0,0,0,.55));
+}
+
+/* Desktop balance */
+@media (min-width:901px){
+  .hero{
+    min-height:750px;
+  }
+
+  .hero .visual{
+    transform:translateY(5px);
+  }
+
+  .hero .visual img{
+    max-width:680px;
+  }
+}
+
+/* Tablet / phone */
+@media (max-width:850px){
+  .hero .wrap{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .hero-content{
+    padding:65px 0 10px;
+    max-width:100%;
+  }
+
+  .hero .visual{
+    padding:0 0 45px;
+  }
+
+  .hero .visual img{
+    width:100%;
+    max-width:600px;
+  }
+}
+
+@media (max-width:550px){
+  .hero .wrap{
+    gap:10px;
+  }
+
+  .hero-content{
+    padding:55px 0 5px;
+  }
+
+  .hero .visual img{
+    max-width:100%;
+  }
+}
+
 </style>
 </head>
 
